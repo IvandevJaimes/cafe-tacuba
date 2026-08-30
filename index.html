@@ -1,34 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="header">
 
-        <!-- Acá pongo el nombre de la cafetería -->
-        <p>Café Tacuba</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-        <!-- Acá pongo los enlaces para moverme por las distintas partes de la página -->
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#cafes">Nuestros cafés</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+<body>
+  <header class="header">
 
-    </header>
+    <!-- Acá pongo el nombre de la cafetería -->
+    <p>Café Tacuba</p>
 
-    <main>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
+    <!-- Acá pongo los enlaces para moverme por las distintas partes de la página -->
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#cafes">Nuestros cafés</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-    <footer></footer>
-  </body>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <article class="hero-texto">
+        <!-- Este es el título de toda la página -->
+        <h1>Un buen café comienza con un buen momento</h1>
+
+        <p>Cafetería artesanal</p>
+
+        <section>
+
+          <article>
+
+            <p>
+              En Café Tacuba creemos que una taza de café
+              puede transformar cualquier momento del día.
+            </p>
+            <a href="#cafes">Conocé nuestros cafés</a>
+          </article>
+
+          <img src="img/cafe.jpg" alt="Taza de café artesanal de Café Tacuba">
+        </section>
+
+        <section>
+
+          <article>
+
+            <h2>Sobre nosotros</h2>
+
+            <p>
+              Café Tacuba nació como un espacio pensado para
+              disfrutar de un buen café, productos artesanales
+              y momentos compartidos.
+            </p>
+
+            <p>
+              Seleccionamos cuidadosamente nuestros ingredientes
+              para ofrecer una experiencia sencilla y agradable
+              en cada visita.
+            </p>
+
+            <p>
+              En Café Tacuba creemos que una taza de café puede transformar
+              cualquier momento del día.
+            </p>
+            <section id="cafes" class="menu">
+              <h2>Nuestro menú</h2>
+
+              <p>Elegí tu café favorito</p>
+
+              <article>
+                <div class="menu-tarjetas">
+                  <article class="producto">
+                    <img src="img/latte.webp" alt="Café latte servido en una taza" />
+
+                    <h3>Café Latte</h3>
+
+                    <p>Café espresso acompañado de leche caliente y espuma.</p>
+
+                    <p class="precio">$4500</p>
+                  </article>
+
+                  <article class="producto">
+                    <img src="img/cappuccino.webp" alt="Cappuccino servido en una taza" />
+
+                    <h3>Cappuccino</h3>
+
+                    <p>Una combinación equilibrada de café, leche y espuma.</p>
+
+                    <p class="precio">$6800</p>
+                  </article>
+
+                  <article class="producto">
+                    <img src="img/americano.webp" alt="Café americano servido en una taza" />
+
+                    <h3>Café Americano</h3>
+
+                    <p>Un café intenso y aromático para comenzar el día.</p>
+
+                    <p class="precio">$6200</p>
+                  </article>
+                </div>
+
+  </main>
+
+  <footer>
+    
+  </footer>
+</body>
+
 </html>

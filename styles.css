@@ -1,0 +1,21 @@
+:root {
+    --color-fondo: #f8f3ee;
+    --color-blanco: #fffdfb;
+    --color-marron: #4b2e25;
+    --color-marron-claro: #7a4d3d;
+    --color-texto: #2d221e;
+    --color-texto-claro: #6c5a52;
+    --color-borde: #d9c9b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}

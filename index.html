@@ -1,147 +1,131 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <header class="header">
+      <!-- Acá pongo el nombre de la cafetería -->
+      <p>Café Tacuba</p>
 
-<body>
+      <!-- Acá pongo los enlaces para moverme por las distintas partes de la página -->
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#cafes">Nuestros cafés</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-  <header class="header">
+    <main>
+      <section id="inicio" class="hero">
+        <!-- Div para centrar el contenido principal -->
+        <div id="hero-centro">
+          <!-- Este es el título de toda la página -->
+          <h1>Un buen café comienza con un buen momento</h1>
 
-    <!-- Acá pongo el nombre de la cafetería -->
-    <p>Café Tacuba</p>
-
-    <!-- Acá pongo los enlaces para moverme por las distintas partes de la página -->
-    <nav class="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#cafes">Nuestros cafés</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-
-  </header>
-
-  <main>
-
-    <section id="inicio" class="hero">
-
-      <!-- Div para centrar el contenido principal -->
-      <div id="hero-centro">
-
-        <!-- Este es el título de toda la página -->
-        <h1>Un buen café comienza con un buen momento</h1>
-
-        <p>Cafetería artesanal</p>
-
-        <p>
-          En Café Tacuba creemos que una taza de café
-          puede transformar cualquier momento del día.
-        </p>
-
-        <a href="#cafes">Conocé nuestros cafés</a>
-
-        <img src="img/cafe.jpg" alt="Taza de café artesanal de Café Tacuba">
-
-      </div>
-
-    </section>
-
-
-    <section id="nosotros">
-
-      <article>
-
-        <h2>Sobre nosotros</h2>
-
-        <p>
-          Café Tacuba nació como un espacio pensado para
-          disfrutar de un buen café, productos artesanales
-          y momentos compartidos.
-        </p>
-
-        <p>
-          Seleccionamos cuidadosamente nuestros ingredientes
-          para ofrecer una experiencia sencilla y agradable
-          en cada visita.
-        </p>
-
-        <p>
-          En Café Tacuba creemos que una taza de café puede transformar
-          cualquier momento del día.
-        </p>
-
-      </article>
-
-    </section>
-
-
-    <section id="cafes" class="menu">
-
-      <h2>Nuestro menú</h2>
-
-      <p>Elegí tu café favorito</p>
-
-      <div class="menu-tarjetas">
-
-        <article class="producto">
-
-          <img src="img/latte.webp" alt="Café latte servido en una taza">
-
-          <h3>Café Latte</h3>
+          <p>Cafetería artesanal</p>
 
           <p>
-            Café espresso acompañado de leche caliente y espuma.
+            En Café Tacuba creemos que una taza de café puede transformar
+            cualquier momento del día.
           </p>
 
-          <p class="precio">$4500</p>
+          <a href="#cafes">Conocé nuestros cafés</a>
 
-        </article>
+          <img src="img/cafe.JPG" alt="Taza de café artesanal de Café Tacuba" />
+        </div>
+      </section>
 
-
-        <article class="producto">
-
-          <img src="img/cappuccino.webp" alt="Cappuccino servido en una taza">
-
-          <h3>Cappuccino</h3>
+      <section id="nosotros">
+        <article>
+          <h2>Sobre nosotros</h2>
 
           <p>
-            Una combinación equilibrada de café, leche y espuma.
+            Café Tacuba nació como un espacio pensado para disfrutar de un buen
+            café, productos artesanales y momentos compartidos.
           </p>
-
-          <p class="precio">$6800</p>
-
-        </article>
-
-
-        <article class="producto">
-
-          <img src="img/americano.webp" alt="Café americano servido en una taza">
-
-          <h3>Café Americano</h3>
 
           <p>
-            Un café intenso y aromático para comenzar el día.
+            Seleccionamos cuidadosamente nuestros ingredientes para ofrecer una
+            experiencia sencilla y agradable en cada visita.
           </p>
 
-          <p class="precio">$6200</p>
-
+          <p>
+            En Café Tacuba creemos que una taza de café puede transformar
+            cualquier momento del día.
+          </p>
         </article>
+      </section>
 
-      </div>
+      <section id="cafes" class="menu">
+        <h2>Nuestro menú</h2>
 
-    </section>
+        <p>Elegí tu café favorito</p>
 
-  </main>
+        <div class="menu-tarjetas">
+          <article class="producto">
+            <img src="img/latte.webp" alt="Café latte servido en una taza" />
 
+            <h3>Café Latte</h3>
 
-  <footer>
+            <p>Café espresso acompañado de leche caliente y espuma.</p>
 
-  </footer>
+            <p class="precio">$4500</p>
+          </article>
 
-</body>
+          <article class="producto">
+            <img
+              src="img/cappuccino.webp"
+              alt="Cappuccino servido en una taza"
+            />
 
+            <h3>Cappuccino</h3>
+
+            <p>Una combinación equilibrada de café, leche y espuma.</p>
+
+            <p class="precio">$6800</p>
+          </article>
+
+          <article class="producto">
+            <img
+              src="img/americano.webp"
+              alt="Café americano servido en una taza"
+            />
+
+            <h3>Café Americano</h3>
+
+            <p>Un café intenso y aromático para comenzar el día.</p>
+
+            <p class="precio">$6200</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- aqui pongo la información final de la página -->
+    <footer id="contacto">
+      <h2>Café Tacuba</h2>
+
+      <p>Café artesanal y buenos momentos.</p>
+
+      <h3>Encontranos</h3>
+
+      <p>Av. siempre viva 123</p>
+
+      <p>San Miguel de Tucumán</p>
+
+      <h3>Contacto</h3>
+
+      <p>chris.asakura11@gmail.com</p>
+
+      <p>3816609713</p>
+
+      <p class="copyright">2026 Café Tacuba - Todos los derechos reservados</p>
+    </footer>
+  </body>
 </html>

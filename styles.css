@@ -1,171 +1,334 @@
-:root {
-    --color-fondo: #f8f3ee;
-    --color-blanco: #fffdfb;
-    --color-marron: #4b2e25;
-    --color-marron-claro: #7a4d3d;
-    --color-texto: #2d221e;
-    --color-texto-claro: #6c5a52;
-    --color-borde: #d9c9b8;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-}
-
 .header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 12px;
-    background-color: var(--color-blanco);
-    border-bottom: 2px solid var(--color-borde);
-    padding: 16px 24px;
+
+    background-color: #f6e7b5;
+
+    border: 2px solid #e5cc83;
+
+    border-radius: 18px;
+
+    padding: 25px 28px;
+
+    margin: 18px 24px;
+
+    box-shadow: 0 5px 15px rgba(92, 70, 35, 0.20);
+
+    position: relative;
+
 }
+
+
+/* NOMBRE DE LA CAFETERÍA */
 
 .header p {
-    font-size: 26px;
+
+    font-size: 32px;
+
     font-weight: bold;
-    color: var(--color-marron);
+
+    color: #5c4033;
+
+    margin: 0;
+
+    text-align: center;
+
+    text-shadow:
+        2px 2px 4px rgba(92, 64, 51, 0.30);
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
 }
 
+
+/* NAVEGACIÓN */
+
 .nav {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 16px;
+
+    margin-left: auto;
+
 }
 
 .nav a {
+
     font-size: 17px;
-    color: var(--color-texto-claro);
-    padding: 8px 10px;
+
+    color: #6b5142;
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    text-shadow: 1px 1px 3px rgba(92, 64, 51, 0.25);
+
 }
 
 .nav a:hover {
-    color: var(--color-marron);
+
+    color: #4b3529;
+
+    background-color: #edd99c;
+
     font-weight: bold;
+
 }
+
+
+/* HERO */
 
 .hero {
+
     display: flex;
+
+    justify-content: center;
+
     align-items: center;
-    gap: 30px;
-    background-color: var(--color-blanco);
-    border: 2px solid var(--color-borde);
+
+    background-color: #fffaf0;
+
+    border: 2px solid #eadfc8;
+
     border-radius: 20px;
+
     padding: 40px 32px;
-    margin-top: 24px;
+
+    margin: 24px;
+
+    box-shadow: 0 7px 18px rgba(92, 70, 35, 0.15);
+
 }
 
-.hero-texto {
-    flex: 1;
-}
 
-.hero-texto h1 {
-    font-size: 34px;
-    margin-bottom: 14px;
-}
+/* DIV PRINCIPAL CENTRADO */
 
-.hero-texto p {
-    font-size: 18px;
-    color: var(--color-texto-claro);
-    margin-bottom: 12px;
-}
+#hero-centro {
 
-.hero-texto a,
-.especialidad a {
-    display: inline-block;
-    background-color: var(--color-marron);
-    color: #fff;
-    border-radius: 20px;
-    padding: 10px 18px;
-    margin-top: 8px;
-}
+    width: 100%;
 
-.hero-texto a:hover,
-.especialidad a:hover {
-    background-color: var(--color-marron-claro);
-}
+    display: flex;
 
-.hero img {
-    flex: 1;
-    height: 300px;
-    border-radius: 16px;
-}
-.nosotros {
-    background-color: var(--color-blanco);
-    border: 2px solid var(--color-borde);
-    border-radius: 20px;
-    padding: 30px 26px;
-}
+    flex-direction: column;
 
-.nosotros h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
+    align-items: center;
 
-.nosotros p {
-    font-size: 18px;
-    color: var(--color-texto-claro);
-    margin-bottom: 10px;
-}
-
-.menu {
     text-align: center;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background-color: #fffdf7;
+
+    border: 1px solid #eadfc8;
+
+    box-shadow:
+        0 8px 20px rgba(92, 70, 35, 0.18),
+        0 2px 5px rgba(92, 70, 35, 0.10);
+
 }
+
+
+/* TITULO */
+
+#hero-centro h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 14px;
+
+    color: #5c4033;
+
+    text-shadow:
+        2px 2px 3px rgba(92, 64, 51, 0.25);
+
+}
+
+
+/* TEXTOS */
+
+#hero-centro p {
+
+    font-size: 18px;
+
+    color: #75604f;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        1px 1px 2px rgba(92, 64, 51, 0.20);
+
+}
+
+
+/* BOTÓN */
+
+#hero-centro a {
+
+    display: inline-block;
+
+    background-color: #c9a66b;
+
+    color: #fff;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    margin-top: 8px;
+
+    text-decoration: none;
+
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.35);
+
+    box-shadow:
+        0 4px 8px rgba(92, 70, 35, 0.25);
+
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+#hero-centro a:hover {
+
+    background-color: #a98650;
+
+    box-shadow:
+        0 6px 12px rgba(92, 70, 35, 0.30);
+
+}
+
+
+/* IMAGEN */
+
+#hero-centro img {
+
+    width: 300px;
+
+    height: 225px;
+
+    object-fit: cover;
+
+    margin-top: 20px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 18px rgba(92, 70, 35, 0.25),
+        0 2px 5px rgba(92, 70, 35, 0.15);
+
+}
+
+
+/* SOBRE NOSOTROS */
+
+#nosotros h2 {
+
+    color: #5c4033;
+
+    text-shadow:
+        2px 2px 3px rgba(92, 64, 51, 0.25);
+
+}
+
+#nosotros p {
+
+    color: #75604f;
+
+    text-shadow:
+        1px 1px 2px rgba(92, 64, 51, 0.20);
+
+}
+
+
+/* MENU */
 
 .menu h2 {
-    font-size: 28px;
-    margin-bottom: 6px;
+
+    color: #5c4033;
+
+    text-shadow:
+        2px 2px 3px rgba(92, 64, 51, 0.25);
+
 }
 
 .menu > p {
-    font-size: 17px;
-    color: var(--color-texto-claro);
-    margin-bottom: 12px;
+
+    color: #75604f;
+
+    text-shadow:
+        1px 1px 2px rgba(92, 64, 51, 0.20);
+
 }
 
-.menu-tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+
+/* TARJETAS DEL MENU */
 
 .producto {
-    width: 280px;
-    background-color: var(--color-blanco);
-    border: 2px solid var(--color-borde);
+
+    background-color: #fffaf0;
+
     border-radius: 16px;
-    overflow: hidden;
+
+    padding: 18px;
+
+    box-shadow:
+        0 6px 15px rgba(92, 70, 35, 0.18);
+
 }
 
-.producto img {
-    height: 200px;
-}
+
+/* TITULOS DE LOS PRODUCTOS */
 
 .producto h3 {
-    font-size: 22px;
-    margin: 14px 14px 6px;
+
+    color: #5c4033;
+
+    text-shadow:
+        2px 2px 3px rgba(92, 64, 51, 0.25);
+
 }
+
+
+/* DESCRIPCION DE LOS PRODUCTOS */
 
 .producto p {
-    font-size: 16px;
-    color: var(--color-texto-claro);
-    margin: 0 14px 14px;
+
+    color: #75604f;
+
+    text-shadow:
+        1px 1px 2px rgba(92, 64, 51, 0.18);
+
 }
 
+
+/* PRECIO */
+
 .producto .precio {
-    font-size: 18px;
+
     font-weight: bold;
-    color: var(--color-marron-claro);
+
+    color: #a97835;
+
+    text-shadow:
+        1px 1px 3px rgba(92, 64, 51, 0.25);
+
 }

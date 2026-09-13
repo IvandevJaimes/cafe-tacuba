@@ -20,11 +20,111 @@
 
   <body>
     <!-- header -->
-    <header class=""></header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm sticky-top">
+    <div class="container py-2">
+
+      <a class="navbar-brand fw-bold fs-4" href="#inicio">
+          Café Tacuba
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" href="#inicio">
+              Inicio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">
+              Nosotros
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#cafes">
+              Nuestros cafés
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">
+              Contacto
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
 
     <main>
       <!-- hero -->
-      <section id="inicio" class=""></section>
+      <section id="inicio" class="bg-light">
+
+    <div class="container py-5 py-lg-6">
+
+      <div class="row align-items-center justify-content-center g-5 py-lg-5">
+
+        <!-- TEXTO -->
+        <div class="col-lg-6 text-center text-lg-start">
+
+          <h1 class="display-3 fw-bold lh-1 mb-4">
+            Un buen café comienza con un buen momento
+          </h1>
+
+          <p class="lead fw-semibold text-secondary mb-3">
+            Cafetería artesanal en San Miguel de Tucumán
+          </p>
+
+          <p class="fs-5 text-secondary mb-4">
+            En Café Tacuba creemos que una taza de café puede
+            transformar cualquier momento del día.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+
+            <a href="#cafes" class="btn btn-dark btn-lg px-4 shadow-sm">
+              Conocé nuestros cafés
+            </a>
+
+            <a href="#contacto" class="btn btn-outline-dark btn-lg px-4">
+              Contactanos
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- IMAGEN -->
+        <div class="col-lg-6">
+
+          <div class="text-center">
+
+            <img src="img/cafe.JPG"
+              class="img-fluid rounded-4 shadow-lg"
+              alt="Taza de café artesanal de Café Tacuba"
+              width="600"
+              height="400">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
       <!-- nosotros -->
       <section id="nosotros"></section>

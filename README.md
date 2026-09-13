@@ -1,5 +1,9 @@
 # Café Tacuba
 
+- Jaimes Ivan
+- Rios Christian
+- Lopez Luis
+
 ## Sobre el proyecto
 
 Este proyecto es una página web de una cafetería llamada Café Tacuba.
@@ -12,6 +16,7 @@ La página está hecha con HTML y CSS. La idea es mostrar información básica d
 * CSS3
 * Git
 * GitHub
+* Bootstrap 
 
 ## Archivos del proyecto
 

@@ -17,6 +17,7 @@ La página está hecha con HTML y CSS. La idea es mostrar información básica d
 * Git
 * GitHub
 * Bootstrap 
+* JavaScript
 
 ## Archivos del proyecto
 

@@ -177,11 +177,19 @@
       <div class="container">
         <h2 class="fw-bold">Café Tacuba</h2>
         <p>Café artesanal y buenos momentos.</p>
-        <h5>Encontranos</h5>
-        <p>Av. Siempre Viva 123 - San Miguel de Tucumán</p>
-        <h5>Contacto</h5>
-        <p>cafetacuba26@gmail.com | 3816609713</p>
+
+        <button id="btnInformacion" class="btn btn-light mb-3" data-bs-toggle="modal" data-bs-target="#modalInformacion">
+          Abrir información
+        </button>
+            <div class="mapa mb-3">
+              <iframe width="200" height="100" ; src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.7356183428565!2d-65.2267221!3d
+              -26.784696200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225da2e380fe9d%3A0xc722accfa749
+              c7f1!2sSiempreviva%2C%20T4103%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1789476154877!5m2!1ses-419!2sar">
+              </iframe>
+
+    </div>
         <p class="small">© 2026 Café Tacuba - Todos los derechos reservados</p>
+        <button id="btnArriba" class="btn btn-secondary">ir arriba</button>
       </div>
     </footer>
     <!-- Modal -->
@@ -206,14 +214,12 @@
             ></button>
           </div>
           <!-- contenido -->
-          <div
-            class="modal-body text-center contenido-modal"
-            id="contenidoModal"
-          >
-            <p>Información de Café Tacuba.</p>
+          <div class="modal-body text-center contenido-modal" id="contenidoModal">
+
           </div>
         </div>
       </div>
     </div>
+
   </body>
 </html>

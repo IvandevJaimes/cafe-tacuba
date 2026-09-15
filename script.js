@@ -175,3 +175,24 @@ navContacto.addEventListener("click", (event) => {
     behavior: "smooth",
   });
 });
+
+//footer
+const btnInformacion=document.getElementById("btnInformacion");
+btnInformacion.addEventListener("click", (event) => {
+  event.preventDefault();
+  tituloModal.textContent = "Información de Café Tacuba";
+  contenidoModal.innerHTML = `
+    <h5>Encontranos</h5>
+    <p>Av. Siempre Viva 123 - San Miguel de Tucumán</p>
+    <h5>Contacto</h5>
+    <p>cafetacuba26@gmail.com | 3816609713</p>
+  `;
+  modalInformacion.show();
+});
+
+const btnArriba = document.getElementById("btnArriba");
+btnArriba.addEventListener("click", (event) => {
+  event.preventDefault();
+   window.scrollTo({ top: 0, behavior: "smooth" 
+  });
+});

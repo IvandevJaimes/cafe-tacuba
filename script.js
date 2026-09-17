@@ -198,10 +198,8 @@ btnUbicacion.addEventListener("click", () => {
   modalInformacion.show();
 });
 
-
 const btnArriba = document.getElementById("btnArriba");
 btnArriba.addEventListener("click", (event) => {
   event.preventDefault();
-   window.scrollTo({ top: 0, behavior: "smooth" 
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });

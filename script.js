@@ -154,6 +154,7 @@ const renderizarCafes = (cafes) => {
     p.classList.add("card-text");
     p.textContent = cafe.descripcion;
 
+
     cardBody.appendChild(h5);
     cardBody.appendChild(p);
     card.appendChild(img);

@@ -202,30 +202,60 @@ const cartilla = [
         descripcion: "Café intenso y aromático",
         imagen: "img/americano.webp",
         precio: "$1.500",
+        contiene: `
+        "Café molido fresco",
+        "Agua filtrada",
+        "Taza pequeña",
+        "Aroma intenso",
+        "Cuerpo fuerte"`
       },
       {
         nombre: "Latte",
         descripcion: "Espresso con leche vaporizada",
         imagen: "img/latte.webp",
         precio: "$2.200",
+        contiene: `
+        "Espresso",
+        "Leche vaporizada",
+        "Espuma ligera",
+        "Taza grande",
+        "Opcional: arte latte"`
       },
       {
         nombre: "Cappuccino",
         descripcion: "Espresso, leche espumosa y cacao",
         imagen: "img/cappuccino.webp",
         precio: "$2.400",
+        contiene: `
+        "Espresso",
+        "Leche vaporizada",
+        "Espuma abundante",
+        "Cacao en polvo",
+        "Taza mediana"` 
       },
       {
         nombre: "Mocha",
         descripcion: "Espresso, chocolate y leche",
         imagen: "img/cafe_mocha.jpg",
         precio: "$2.700",
+        contiene: `
+        "Espresso",
+        "Chocolate derretido",
+        "Leche vaporizada",
+        "Crema opcional",
+        "Cacao espolvoreado"` 
       },
       {
         nombre: "Macchiato",
         descripcion: "Espresso con un toque de leche espumada",
         imagen: "img/macchiato.jpeg",
         precio: "$2.100",
+        contiene: `
+        "Espresso",
+        "Espuma de leche",
+        "Taza pequeña",
+        "Sabor intenso",
+        "Toque cremoso"`
       },
     ],
   },
@@ -238,24 +268,48 @@ const cartilla = [
         descripcion: "Helado bañado en espresso caliente",
         imagen: "img/affogato.jpg",
         precio: "$2.800",
+        contiene: `
+        "Helado de vainilla",
+        "Espresso caliente",
+        "Taza o copa de postre",
+        "Textura cremosa",
+        "Contraste frío-caliente"`
       },
       {
         nombre: "Iced Latte",
         descripcion: "Latte con hielo y leche fría",
         imagen: "img/icedLatte.jpeg",
         precio: "$2.500",
+        contiene: `
+        "Espresso",
+        "Leche fría",
+        "Cubos de hielo",
+        "Vaso alto",
+        "Sabor suave y refrescante"`
       },
       {
         nombre: "Cold Brew",
         descripcion: "Extracción en frío 12 horas",
         imagen: "img/cafe.JPG",
         precio: "$2.600",
+        contiene: `
+        "Café molido grueso",
+        "Agua filtrada fría",
+        "Proceso de 12 horas",
+        "Vaso con hielo",
+        "Sabor menos ácido"`
       },
       {
         nombre: "Frappé de cacao",
         descripcion: "Hielo, cacao y crema batida",
         imagen: "img/Frappé de cacao.jpeg",
         precio: "$3.000",
+        contiene: `
+        "Cubos de hielo",
+        "Cacao en polvo",
+        "Leche fría",
+        "Crema batida",
+        "Textura espesa y dulce"`
       },
     ],
   },
@@ -268,24 +322,49 @@ const cartilla = [
         descripcion: "Con opción de leche o limón",
         imagen: "img/teNegro.jpeg",
         precio: "$1.800",
+        contiene: `
+        "Hojas de té negro",
+        "Agua caliente",
+        "Opción de leche",
+        "Rodaja de limón",
+        "Taza mediana"`
       },
       {
         nombre: "Té verde",
         descripcion: "Suave y refrescante",
         imagen: "img/teverde.jpeg",
         precio: "$1.800",
+        contiene: `
+        "Hojas de té verde",
+        "Agua caliente",
+        "Taza pequeña",
+        "Aroma herbal",
+        "Sabor ligero"`
+
       },
       {
         nombre: "Infusión de jazmín",
         descripcion: "Floral y delicada",
         imagen: "img/tedejazmin.jpeg",
         precio: "$2.000",
+        contiene: `
+        "Flores de jazmín",
+        "Agua caliente",
+        "Taza de porcelana",
+        "Aroma floral",
+        "Sabor delicado"`
       },
       {
         nombre: "Submarino",
         descripcion: "Cacao a la taza con leche",
         imagen: "img/submarino.jpeg",
         precio: "$2.200",
+        contiene:`
+        "Tableta de chocolate",
+        "Leche caliente",
+        "Taza grande",
+        "Sabor intenso",
+        "Textura cremosa"`
       },
     ],
   },
@@ -298,30 +377,60 @@ const cartilla = [
         descripcion: "Recién horneada",
         imagen: "img/medialuna.jpeg",
         precio: "$900",
+        contiene: `
+        "Harina de trigo",
+        "Manteca",
+        "Azúcar",
+        "Levadura",
+        "Glaseado ligero"`
       },
       {
         nombre: "Brownie",
         descripcion: "Con nueces y chocolate fundido",
         imagen: "img/brownie.jpg",
         precio: "$2.300",
+        contiene: `
+        "Chocolate amargo",
+        "Manteca",
+        "Azúcar",
+        "Huevos",
+        "Nueces picadas"`
       },
       {
         nombre: "Lemon Pie",
         descripcion: "Tarta de limón con merengue",
         imagen: "img/Lemon Pie.jpeg",
         precio: "$2.500",
+        contiene: `
+        "Base de masa",
+        "Crema de limón",
+        "Azúcar",
+        "Huevos",
+        "Merengue italiano"`
       },
       {
         nombre: "Cheesecake",
         descripcion: "Con salsa de frutos rojos",
         imagen: "img/Cheesecake.jpeg",
         precio: "$2.800",
+        contiene: `
+        "Queso crema",
+        "Base de galletas",
+        "Azúcar",
+        "Huevos",
+        "Salsa de frutos rojos"`
       },
       {
         nombre: "Alfajor de maicena",
         descripcion: "Clásico, con dulce de leche",
         imagen: "img/Alfajor de maicena.jpeg",
         precio: "$1.200",
+        contiene: `
+        "Maicena",
+        "Harina",
+        "Manteca",
+        "Dulce de leche",
+        "Coco rallado"`
       },
     ],
   },
@@ -387,17 +496,39 @@ const renderizarCartilla = (cartilla) => {
       );
 
       const precio = document.createElement("span");
-      precio.classList.add("fw-bold");
+      precio.classList.add("fw-bold", "mb-2", "d-block");
       precio.textContent = producto.precio;
+
+      const botonWrapper = document.createElement("div");
+      botonWrapper.classList.add( "d-flex", "justify-content-end", "mt-2");
+
+      const Btnvermas = document.createElement("button");
+      Btnvermas.classList.add("btn", "btn-sm", "btn-dark", "mt-2");
+      Btnvermas.textContent = "Ver más";
+
 
       cardBody.appendChild(h5);
       cardBody.appendChild(p);
       cardFooter.appendChild(precio);
+      cardFooter.appendChild(botonWrapper);
+      botonWrapper.appendChild(Btnvermas);
       card.appendChild(img);
       card.appendChild(cardBody);
       card.appendChild(cardFooter);
       col.appendChild(card);
       row.appendChild(col);
+
+      Btnvermas.addEventListener("click", (e) => {
+      e.stopPropagation();
+      tituloModal.textContent = producto.nombre;
+      contenidoModal.innerHTML = `
+      <h6 class="mb-2">Este Producto contiene:</h6>
+      <p>${producto.contiene}</p>
+      <img src="${producto.imagen}" alt="${producto.nombre}" 
+         class="img-fluid rounded mt-3" style="max-height:200px;object-fit:cover;">`;
+      footerComandero.classList.add("d-none");
+      modal.show();
+      });
 
       card.addEventListener("click", () => {
         comandero.push(producto);

@@ -45,14 +45,25 @@
           </a>
         </div>
 
-        <button
-          class="btn btn-light rounded-pill"
-          id="loginBtn"
-          data-bs-toggle="modal"
-          data-bs-target=""
-        >
-          Ingresar
-        </button>
+        <div class="dropdown">
+  <button
+    class="btn btn-light rounded-pill dropdown-toggle"
+    id="loginBtn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Ingresar
+  </button>
+
+  <ul class="dropdown-menu">
+    <li>
+      <button class="dropdown-item" id="btnCerrarSesion">
+        Cerrar sesión
+      </button>
+    </li>
+  </ul>
+</div>
       </nav>
     </header>
 

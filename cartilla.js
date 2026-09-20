@@ -6,12 +6,30 @@ const contenidoModal = document.getElementById("contenidoModal");
 const footerComandero = document.querySelector(".modal-footer");
 const totalComandero = document.getElementById("totalComandero");
 const btnHacerPedido = document.getElementById("btnHacerPedido");
-
+const loginBtn = document.getElementById("loginBtn");
+const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 const btnArriba = document.getElementById("btnArriba");
-if (btnArriba) {
-  btnArriba.addEventListener("click", () =>
-    window.scrollTo({ top: 0, behavior: "smooth" }),
-  );
+
+// iniciar sesión
+if (usuarioActivo) {
+  loginBtn.textContent = usuarioActivo.nombre;
+
+  btnCerrarSesion.addEventListener("click", () => {
+    localStorage.removeItem("usuarioActivo");
+    window.location.href = "index.html";
+  });
+} else {
+  loginBtn.textContent = "Ingresar";
+  loginBtn.classList.remove("dropdown-toggle");
+  loginBtn.removeAttribute("data-bs-toggle");
+
+  btnCerrarSesion.style.display = "none";
+
+  loginBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "login.html";
+  });
 }
 
 const btnUbicacion = document.getElementById("btnUbicacion");

@@ -13,15 +13,6 @@ Página web de la cafetería artesanal Café Tacuba, en San Miguel de Tucumán. 
 - JavaScript
 - Git / GitHub
 
-## Archivos del proyecto
-
-| Archivo      | Descripción                                            |
-| ------------ | ------------------------------------------------------ |
-| `index.html` | Estructura y contenido de la página                    |
-| `styles.css` | Estilos propios de la página                           |
-| `script.js`  | Lógica: inicio de sesión, modal y render del menú      |
-| `img/`       | Imágenes del menú y de la página                       |
-| `README.md`  | Información sobre el proyecto                          |
 
 ## Estructura de la página
 

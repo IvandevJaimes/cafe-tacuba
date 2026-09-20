@@ -1,4 +1,5 @@
 const loginBtn = document.getElementById("loginBtn");
+const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
 const nosotrosBtn = document.getElementById("nosotrosBtn");
 const navContacto = document.getElementById("navContacto");
 const modalInformacion = new bootstrap.Modal(
@@ -47,64 +48,29 @@ const cafes = [
   },
 ];
 
-//inicio de seion
-loginBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  tituloModal.textContent = "Iniciar sesión";
-  contenidoModal.innerHTML = `
-    <div
-      style=" background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('img/inicio_secion.webp');
-        background-size: cover;
-        background-position: center;
-        min-height: 400px;
-        padding: 60px 35px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      ">
-      <div
-        style="
-          background: rgba(255, 255, 255, 0.9);
-          padding: 25px;
-          border-radius: 12px;
-          width: 100%;
-          max-width: 350px;
-        ">
-        <h3 class="text-center mb-4">
-          Bienvenido
-        </h3>
-        <input id="nombreUsuario" type="text" class="form-control mb-3" placeholder="Nombre de usuario">
-        <input id="contrasenaUsuario" type="password" class="form-control mb-3" placeholder="Contraseña">
-        <button id="btnIniciarSesion" type="button" class="btn btn-dark w-100">
-          Iniciar sesión
-        </button>
-        <p id="mensajeInicioSesion" class="mt-3 mb-0">
-        </p>
-      </div>
-    </div>
-  `;
+// iniciar sesión
+const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 
-  modalInformacion.show();
+if (usuarioActivo) {
+  loginBtn.textContent = usuarioActivo.nombre;
 
-  const btnIniciarSesion = document.getElementById("btnIniciarSesion");
-  const nombreUsuario = document.getElementById("nombreUsuario");
-  const contrasenaUsuario = document.getElementById("contrasenaUsuario");
-  const mensajeInicioSesion = document.getElementById("mensajeInicioSesion");
-
-  //iniciar sesión
-  btnIniciarSesion.addEventListener("click", () => {
-    const nombre = nombreUsuario.value.trim();
-    const contrasena = contrasenaUsuario.value.trim();
-    if (nombre !== "" && contrasena !== "") {
-      loginBtn.textContent = nombre;
-      mensajeInicioSesion.textContent = "Inicio de sesión correcto.";
-      modalInformacion.hide();
-    } else {
-      mensajeInicioSesion.textContent = "Completá el usuario y la contraseña.";
-    }
+  btnCerrarSesion.addEventListener("click", () => {
+    localStorage.removeItem("usuarioActivo");
+    window.location.href = "index.html";
   });
-});
+} else {
+  loginBtn.textContent = "Ingresar";
+  loginBtn.classList.remove("dropdown-toggle");
+  loginBtn.removeAttribute("data-bs-toggle");
+
+  btnCerrarSesion.style.display = "none";
+
+  loginBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "login.html";
+  });
+}
+
 //sobre nosotros
 nosotrosBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -153,7 +119,6 @@ const renderizarCafes = (cafes) => {
     const p = document.createElement("p");
     p.classList.add("card-text");
     p.textContent = cafe.descripcion;
-
 
     cardBody.appendChild(h5);
     cardBody.appendChild(p);

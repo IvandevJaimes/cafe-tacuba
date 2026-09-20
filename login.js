@@ -134,8 +134,16 @@ function iniciarSesion(event) {
     }
   }
   if (usuarioEncontrado) {
-    window.location.href = "index.html";
-  } else {
+  const usuarioActivo = usuarios.find((usuario) => {
+    return (
+      usuario.usuario === usuarioIngresado &&
+      usuario.contrasena === contrasenaIngresada
+    );
+  });
+
+  localStorage.setItem( "usuarioActivo", JSON.stringify(usuarioActivo));
+  window.location.href = "index.html";
+} else {
     mensajeLogin.textContent = "Usuario o contraseña incorrectos.";
     mensajeLogin.className = "text-danger text-center mt-3";
   }

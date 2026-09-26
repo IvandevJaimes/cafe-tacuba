@@ -476,16 +476,20 @@ const renderizarCartilla = (cartilla) => {
 
     categoria.productos.forEach((producto) => {
       const col = document.createElement("div");
-      col.classList.add("col-4", "col-lg-3");
+      col.classList.add("col-6", "col-lg-3");
 
       const card = document.createElement("div");
-      card.classList.add("card", "h-100", "shadow-sm", "border-0");
+      card.classList.add("card", "h-100", "shadow-sm", "border-0", "overflow-hidden");
+
+      const ratio = document.createElement("div");
+      ratio.classList.add("ratio", "ratio-4x3");
 
       const img = document.createElement("img");
       img.src = producto.imagen;
-      img.classList.add("card-img-top");
+      img.classList.add("object-fit-cover");
       img.alt = producto.nombre;
       img.loading = "lazy";
+      ratio.appendChild(img);
 
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body", "d-flex", "flex-column", "p-3");
@@ -530,7 +534,7 @@ const renderizarCartilla = (cartilla) => {
       cardFooter.appendChild(precio);
       cardFooter.appendChild(botonWrapper);
       botonWrapper.appendChild(Btnvermas);
-      card.appendChild(img);
+      card.appendChild(ratio);
       card.appendChild(cardBody);
       card.appendChild(cardFooter);
       col.appendChild(card);

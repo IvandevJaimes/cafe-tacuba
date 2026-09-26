@@ -7,143 +7,274 @@
       content="Café Tacuba, cafetería artesanal donde disfrutamos de buenos cafés y buenos momentos en San Miguel de Tucumán."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      defer
-    ></script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer ></script>
+    <script src="script.js" defer></script>
     <title>Café Tacuba | Cafetería artesanal</title>
   </head>
 
-  <body>
-    <!-- header -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm sticky-top">
-    <div class="container py-2">
-
-      <a class="navbar-brand fw-bold fs-4" href="#inicio">
-          Café Tacuba
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="menu">
-
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-
-          <li class="nav-item">
-            <a class="nav-link active fw-semibold" href="#inicio">
-              Inicio
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#nosotros">
-              Nosotros
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#cafes">
-              Nuestros cafés
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">
-              Contacto
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
+  <body class="bg-dark">
+    <div style="background-color:#222; color:white; padding:10px;">
+      <marquee behavior="alternate" direction="left" scrollamount="6">
+        ☕ Bienvenidos a Café Tacuba , Tu lugar para disfrutar del café ☕
+      </marquee>
+      <header class="encabezado">
+        <nav
+          class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm sticky-top px-3 px-md-4"
+        >
+          <div class="container-fluid px-0 py-2">
+            <a class="navbar-brand fw-bold fs-4 nombre-marca" href="#inicio">
+              <i class="fa-solid fa-mug-hot"></i> Café Tacuba
+          </a>
+          <!-- boton desplega menu cuando la pantalla es de celular -->
+          <button
+            class="navbar-toggler boton-menu"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacion"
+            aria-controls="menuNavegacion"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navbar -->
+          <div class="collapse navbar-collapse" id="menuNavegacion">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item">
+                <a id="" class="nav-link enlace-navegacion" href="#inicio">
+                  <i class="fa-solid fa-house"></i> Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="" class="nav-link enlace-navegacion" href="#nosotros">
+                  <i class="fa-solid fa-users"></i> Nosotros
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  id="navCafes"
+                  class="nav-link enlace-navegacion"
+                  href="#cafes"
+                >
+                  <i class="fa-solid fa-mug-hot"></i> Nuestros cafés
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  id="navContacto"
+                  class="nav-link enlace-navegacion"
+                  href="#contacto"
+                >
+                  <i class="fa-solid fa-envelope"></i> Contacto
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn-light rounded-pill dropdown-toggle"
+                  id="loginBtn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Ingresar
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <button class="dropdown-item" id="btnCerrarSesion">
+                      Cerrar sesión
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+      </header>
     </div>
-  </nav>
 
     <main>
-      <!-- hero -->
-      <section id="inicio" class="bg-light">
+      <section id="inicio" class="  bg-light seccion-inicio" style="background-image: url('img/bg-main.jpg')">
+        <div class="container py-5">
+          <div
+            class="row align-items-center justify-content-center gx-3 gy-5 py-lg-5"
+          >
+            <!-- contenedor para hero -->
+            <div class="col-lg-6 text-center text-lg-start inicio-texto">
+              <h1 class="display-3 fw-bold lh-1 mb-4 titulo-principal">
+                Un buen café comienza con un buen momento
+              </h1>
+              <p
+                class="lead fw-semibold text-secondary mb-3 subtitulo-principal"
+              >
+                Cafetería artesanal en San Miguel de Tucumán
+              </p>
+              <p class="fs-5 text-secondary mb-4 descripcion-principal">
+                En Café Tacuba creemos que una taza de café puede transformar
+                cualquier momento del día.
+              </p>
+              <!-- botones en hero -->
+              <div
+                class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start botones-inicio"
+              >
+                <a
+                  href="#cafes"
+                  class="btn btn-dark btn-lg px-4 shadow-sm boton-principal"
+                >
+                  Conocé nuestros cafés
+                </a>
+                <a
+                  href="#contacto"
+                  class="btn btn-outline-dark btn-lg px-4 boton-secundario"
+                >
+                  Contactanos
+                </a>
+              </div>
+            </div>
 
-    <div class="container py-5 py-lg-6">
-
-      <div class="row align-items-center justify-content-center g-5 py-lg-5">
-
-        <!-- TEXTO -->
-        <div class="col-lg-6 text-center text-lg-start">
-
-          <h1 class="display-3 fw-bold lh-1 mb-4">
-            Un buen café comienza con un buen momento
-          </h1>
-
-          <p class="lead fw-semibold text-secondary mb-3">
-            Cafetería artesanal en San Miguel de Tucumán
-          </p>
-
-          <p class="fs-5 text-secondary mb-4">
-            En Café Tacuba creemos que una taza de café puede
-            transformar cualquier momento del día.
-          </p>
-
-          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-
-            <a href="#cafes" class="btn btn-dark btn-lg px-4 shadow-sm">
-              Conocé nuestros cafés
-            </a>
-
-            <a href="#contacto" class="btn btn-outline-dark btn-lg px-4">
-              Contactanos
-            </a>
-
+            <!-- imagen del hero -->
+            <div class="col-lg-6 inicio-imagen">
+              <div class="text-center">
+                <img
+                  src="img/cafe.JPG"
+                  class="img-fluid rounded-4 shadow-lg imagen-cafe-principal"
+                  alt="Taza de café artesanal de Café Tacuba"
+                  width="600"
+                  height="400"
+                />
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
+      <!-- SECCIÓN NOSOTROS -->
+
+      <section id="nosotros" class="position-relative my-5">
+        <div id="carouselFondo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/bg-nosotros1.jpg"
+                class="d-block w-100"
+                style="height: 400px; object-fit: cover"
+                alt="Interior de Café Tacuba"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/bg-nosotros2.avif"
+                class="d-block w-100"
+                style="height: 400px; object-fit: cover"
+                alt="Preparando café en Café Tacuba"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/bg-nosotros3"
+                class="d-block w-100"
+                style="height: 400px; object-fit: cover"
+                alt="Ambiente de Café Tacuba"
+              />
+            </div>
+          </div>
         </div>
 
-
-        <!-- IMAGEN -->
-        <div class="col-lg-6">
-
-          <div class="text-center">
-
-            <img src="img/cafe.JPG"
-              class="img-fluid rounded-4 shadow-lg"
-              alt="Taza de café artesanal de Café Tacuba"
-              width="600"
-              height="400">
-
-          </div>
-
+        <div
+          class="container position-absolute top-50 start-50 translate-middle text-white text-center"
+        >
+          <h2 class="mb-4">Sobre nosotros</h2>
+          <p>
+            Café Tacuba nació como un espacio pensado para disfrutar de un buen
+            café, productos artesanales y momentos compartidos.
+          </p>
+          <p>
+            Seleccionamos cuidadosamente nuestros ingredientes para ofrecer
+            una experiencia sencilla y agradable en cada visita.
+          </p>
+          <p>
+            Creemos que una taza de café puede transformar cualquier momento del
+            día.
+          </p>
+          <button id="nosotrosBtn" class="btn btn-light">Más info</button>
         </div>
+      </section>
 
-      </div>
-
-    </div>
-
-  </section>
-
-      <!-- nosotros -->
-      <section id="nosotros"></section>
-
-      <!-- menu -->
-      <section id="cafes" class=""></section>
+    <section
+      class="text-white py-5 my-4"
+      style="background-image: url('img/bg-menu.jpg')"
+      id="cafes"
+    >
+        <div class="container">
+          <h2 class="text-center mb-4">Nuestro menú</h2>
+          <p class="text-center">Elegí tu café favorito</p>
+          <div class="row g-4" id="cardContenedor"></div>
+        </div>
+        <div class="text-center mt-4">
+          <button
+            class="btn btn-dark d-block mx-auto w-75 py-2"
+            onclick="window.location.href = 'cartilla.html'"
+          >
+            Ver cartilla
+          </button>
+        </div>
+      </section>
     </main>
-
-    <!-- contacto -->
-    <footer id="contacto" class="bg-dark text-light text-center py-4">
-      <div class="container">
+    <!-- footer -->
+    <footer id="contacto" class="bg-dark text-light py-4">
+      <div class="container text-start">
         <h2 class="fw-bold">Café Tacuba</h2>
         <p>Café artesanal y buenos momentos.</p>
-        <h5>Encontranos</h5>
-        <p>Av. Siempre Viva 123 - San Miguel de Tucumán</p>
-        <h5>Contacto</h5>
-        <p>cafetacuba26@gmail.com | 3816609713</p>
+
+        <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-start align-items-sm-center gap-2 mb-2">
+          <h5 class="mb-0">Encontranos:</h5>
+          <p class="mb-0">Av. Siempre Viva 123 - San Miguel de Tucumán</p>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-start align-items-sm-center gap-2 gap-sm-3 mb-4">
+          <h5 class="mb-0">Contacto:</h5>
+          <p class="mb-0">cafetacuba26@gmail.com | 3816609713</p>
+          <button id="btnUbicacion" class="btn btn-outline-light">
+            <i class="bi bi-geo-alt-fill"></i> Ubicación
+          </button>
+        </div>
+
         <p class="small">© 2026 Café Tacuba - Todos los derechos reservados</p>
+        <button id="btnArriba" class="btn btn-secondary">Ir arriba</button>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <dive
+      class="modal fade"
+      id="modalInformacion"
+      tabindex="-1"
+      aria-labelledby="tituloModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ventana-modal">
+          <!-- encabezado -->
+          <div class="modal-header">
+            <h2 class="modal-title" id="tituloModal">Café Tacuba</h2>
+            <!-- un boton para cerrar -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <!-- contenido -->
+          <div
+            class="modal-body text-center contenido-modal"
+            id="contenidoModal"
+          ></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

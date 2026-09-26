@@ -14,9 +14,13 @@
     <title>Café Tacuba | Cafetería artesanal</title>
   </head>
 
-  <body>
-    <header class="encabezado">
-      <nav
+  <body class="bg-dark">
+    <div style="background-color:#222; color:white; padding:10px;">
+      <marquee behavior="alternate" direction="left" scrollamount="6">
+        ☕ Bienvenidos a Café Tacuba , Tu lugar para disfrutar del café ☕
+      </marquee>
+      <header class="encabezado">
+        <nav
         class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm sticky-top px-3 px-md-4"
       >
         <div class="container-fluid px-0 py-2">
@@ -92,7 +96,7 @@
     </header>
 
     <main>
-      <section id="inicio" class="bg-light seccion-inicio">
+      <section id="inicio" class="  bg-light seccion-inicio" style="background-image: url('img/bg-main.jpg')">
         <div class="container py-5">
           <div
             class="row align-items-center justify-content-center g-5 py-lg-5"
@@ -148,29 +152,42 @@
 
       <!-- SECCIÓN NOSOTROS -->
 
-      <section id="nosotros" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Sobre nosotros</h2>
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <p>
-                Café Tacuba nació como un espacio pensado para disfrutar de un
-                buen café, productos artesanales y momentos compartidos.
-              </p>
-              <p>
-                Seleccionamos cuidadosamente nuestros ingredientes para ofrecer
-                una experiencia sencilla y agradable en cada visita.
-              </p>
-              <p>
-                Creemos que una taza de café puede transformar cualquier momento
-                del día.
-              </p>
-              <button id="nosotrosBtn" class="btn btn-dark">Mas info</button>
-            </div>
-          </div>
+     <section id="nosotros" class="position-relative" style="margin-top:60px;">
+  <!-- Carrusel de fondo -->
+  <div id="carouselFondo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/bg-nosotros1.jpg" class="d-block w-100" style="height:400px; object-fit:cover;" alt="Café 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/bg-nosotros2.avif" class="d-block w-100" style="height:400px; object-fit:cover;" alt="Café 1">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="img/bg-nosotros3"
+          class="d-block w-100" style="height:400px; object-fit:cover;" alt="Café 1">
         </div>
-      </section>
-      <section id="cafes" class="bg-light py-5">
+    </div>
+  </div>
+
+  //Contenido encima del carrusel
+  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h2 class="mb-4">Sobre nosotros</h2>
+    <p>
+      Café Tacuba nació como un espacio pensado para disfrutar de un buen café,
+      productos artesanales y momentos compartidos.
+    </p>
+    <p>
+      Seleccionamos cuidadosamente nuestros ingredientes para ofrecer
+      una experiencia sencilla y agradable en cada visita.
+    </p>
+    <p>
+      Creemos que una taza de café puede transformar cualquier momento del día.
+    </p>
+    <button id="nosotrosBtn" class="btn btn-light">Más info</button>
+  </div>
+      //menu
+      <section class=" text-white py-5 mt-4 mb-4" style="background-image: url('img/bg-menu.jpg');"id="cafes">
         <div class="container">
           <h2 class="text-center mb-4">Nuestro menú</h2>
           <p class="text-center">Elegí tu café favorito</p>

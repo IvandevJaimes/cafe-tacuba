@@ -10,11 +10,9 @@ const loginBtn = document.getElementById("loginBtn");
 const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
 const btnCerrarSesion = document.getElementById("btnCerrarSesion");
 const btnArriba = document.getElementById("btnArriba");
-
 // iniciar sesión
 if (usuarioActivo) {
   loginBtn.textContent = usuarioActivo.nombre;
-
   btnCerrarSesion.addEventListener("click", () => {
     localStorage.removeItem("usuarioActivo");
     window.location.href = "index.html";
@@ -23,15 +21,12 @@ if (usuarioActivo) {
   loginBtn.textContent = "Ingresar";
   loginBtn.classList.remove("dropdown-toggle");
   loginBtn.removeAttribute("data-bs-toggle");
-
   btnCerrarSesion.style.display = "none";
-
   loginBtn.addEventListener("click", (event) => {
     event.preventDefault();
     window.location.href = "login.html";
   });
 }
-
 const btnUbicacion = document.getElementById("btnUbicacion");
 if (btnUbicacion) {
   btnUbicacion.addEventListener("click", () => {
@@ -41,9 +36,7 @@ if (btnUbicacion) {
         <iframe
           width="400"
           height="200"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.7356183428565!2d-65.2267221!3d-26
-        .784696200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225da2e380fe9d%3A0xc722accfa7
-        49c7f1!2sSiempreviva%2C%20T4103%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1789476154877!5m2!1ses-419!2sar"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.7356183428565!2d-65.2267221!3d-26.784696200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225da2e380fe9d%3A0xc722accfa749c7f1!2sSiempreviva%2C%20T4103%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1789476154877!5m2!1ses-419!2sar"
           style="border:0;"
           allowfullscreen=""
           loading="lazy">
@@ -54,14 +47,12 @@ if (btnUbicacion) {
     modal.show();
   });
 }
-
 const calcularTotal = () =>
   comandero.reduce(
     (acumulado, producto) =>
       acumulado + Number(producto.precio.replace(/[^0-9]/g, "")),
     0,
   );
-
 btnHacerPedido.addEventListener("click", () => {
   comandero.length = 0;
   comanderoContador.textContent = "0";
@@ -75,11 +66,9 @@ btnHacerPedido.addEventListener("click", () => {
   `;
   footerComandero.classList.add("d-none");
 });
-
 comanderoBtn.addEventListener("click", () => {
   tituloModal.textContent = "Mi comandero";
   contenidoModal.innerHTML = "";
-
   if (comandero.length === 0) {
     contenidoModal.innerHTML = `
       <p class="text-secondary">
@@ -94,15 +83,11 @@ comanderoBtn.addEventListener("click", () => {
     columna.classList.add("d-flex", "flex-column", "gap-2", "text-start");
     contenidoModal.style.maxHeight = "60vh";
     contenidoModal.style.overflowY = "auto";
-
     const agregados = [];
-
     comandero.forEach((producto) => {
       if (agregados.includes(producto)) return;
       agregados.push(producto);
-
       const cantidad = comandero.filter((item) => item === producto).length;
-
       const card = document.createElement("div");
       card.classList.add(
         "card",
@@ -113,7 +98,6 @@ comanderoBtn.addEventListener("click", () => {
         "align-items-center",
         "overflow-hidden",
       );
-
       const img = document.createElement("img");
       img.src = producto.imagen;
       img.alt = producto.nombre;
@@ -121,7 +105,6 @@ comanderoBtn.addEventListener("click", () => {
       img.style.width = "90px";
       img.style.height = "90px";
       img.style.objectFit = "cover";
-
       const cardBody = document.createElement("div");
       cardBody.classList.add(
         "card-body",
@@ -130,25 +113,19 @@ comanderoBtn.addEventListener("click", () => {
         "justify-content-between",
         "p-3",
       );
-
       const info = document.createElement("div");
-
       const h6 = document.createElement("h6");
       h6.classList.add("card-title", "mb-1");
       h6.textContent = producto.nombre;
-
       const p = document.createElement("p");
       p.classList.add("card-text", "small", "text-secondary", "mb-0");
       p.textContent = producto.precio;
-
       const agregarBtn = document.createElement("button");
       agregarBtn.classList.add("btn", "btn-outline-primary");
       agregarBtn.textContent = "+";
-
       const restarBtn = document.createElement("button");
       restarBtn.classList.add("btn", "btn-outline-danger", "ms-2");
       restarBtn.textContent = "-";
-
       agregarBtn.addEventListener("click", () => {
         comandero.push(producto);
         comanderoContador.textContent = comandero.length;
@@ -160,7 +137,6 @@ comanderoBtn.addEventListener("click", () => {
         )}`;
         footerComandero.classList.remove("d-none");
       });
-
       restarBtn.addEventListener("click", () => {
         const index = comandero.indexOf(producto);
         if (index > -1) {
@@ -188,11 +164,9 @@ comanderoBtn.addEventListener("click", () => {
           }
         }
       });
-
       const cantidadSpan = document.createElement("span");
       cantidadSpan.classList.add("fw-bold", "ms-3", "flex-shrink-0");
       cantidadSpan.textContent = `× ${cantidad}`;
-
       info.appendChild(h6);
       info.appendChild(p);
       cardBody.appendChild(info);
@@ -203,13 +177,10 @@ comanderoBtn.addEventListener("click", () => {
       card.appendChild(cardBody);
       columna.appendChild(card);
     });
-
     contenidoModal.appendChild(columna);
   }
-
   modal.show();
 });
-
 const cartilla = [
   {
     categoria: "Cafés calientes",
@@ -225,7 +196,7 @@ const cartilla = [
         "Agua filtrada",
         "Taza pequeña",
         "Aroma intenso",
-        "Cuerpo fuerte"`
+        "Cuerpo fuerte"`,
       },
       {
         nombre: "Latte",
@@ -237,7 +208,7 @@ const cartilla = [
         "Leche vaporizada",
         "Espuma ligera",
         "Taza grande",
-        "Opcional: arte latte"`
+        "Opcional: arte latte"`,
       },
       {
         nombre: "Cappuccino",
@@ -249,7 +220,7 @@ const cartilla = [
         "Leche vaporizada",
         "Espuma abundante",
         "Cacao en polvo",
-        "Taza mediana"` 
+        "Taza mediana"`,
       },
       {
         nombre: "Mocha",
@@ -261,7 +232,7 @@ const cartilla = [
         "Chocolate derretido",
         "Leche vaporizada",
         "Crema opcional",
-        "Cacao espolvoreado"` 
+        "Cacao espolvoreado"`,
       },
       {
         nombre: "Macchiato",
@@ -273,13 +244,13 @@ const cartilla = [
         "Espuma de leche",
         "Taza pequeña",
         "Sabor intenso",
-        "Toque cremoso"`
+        "Toque cremoso"`,
       },
     ],
   },
   {
     categoria: "Bebidas frías",
-    clase: "bg-light",
+    clase: "",
     productos: [
       {
         nombre: "Affogato",
@@ -291,7 +262,7 @@ const cartilla = [
         "Espresso caliente",
         "Taza o copa de postre",
         "Textura cremosa",
-        "Contraste frío-caliente"`
+        "Contraste frío-caliente"`,
       },
       {
         nombre: "Iced Latte",
@@ -303,7 +274,7 @@ const cartilla = [
         "Leche fría",
         "Cubos de hielo",
         "Vaso alto",
-        "Sabor suave y refrescante"`
+        "Sabor suave y refrescante"`,
       },
       {
         nombre: "Cold Brew",
@@ -315,7 +286,7 @@ const cartilla = [
         "Agua filtrada fría",
         "Proceso de 12 horas",
         "Vaso con hielo",
-        "Sabor menos ácido"`
+        "Sabor menos ácido"`,
       },
       {
         nombre: "Frappé de cacao",
@@ -327,7 +298,7 @@ const cartilla = [
         "Cacao en polvo",
         "Leche fría",
         "Crema batida",
-        "Textura espesa y dulce"`
+        "Textura espesa y dulce"`,
       },
     ],
   },
@@ -345,7 +316,7 @@ const cartilla = [
         "Agua caliente",
         "Opción de leche",
         "Rodaja de limón",
-        "Taza mediana"`
+        "Taza mediana"`,
       },
       {
         nombre: "Té verde",
@@ -357,8 +328,7 @@ const cartilla = [
         "Agua caliente",
         "Taza pequeña",
         "Aroma herbal",
-        "Sabor ligero"`
-
+        "Sabor ligero"`,
       },
       {
         nombre: "Infusión de jazmín",
@@ -370,25 +340,25 @@ const cartilla = [
         "Agua caliente",
         "Taza de porcelana",
         "Aroma floral",
-        "Sabor delicado"`
+        "Sabor delicado"`,
       },
       {
         nombre: "Submarino",
         descripcion: "Cacao a la taza con leche",
         imagen: "img/submarino.jpeg",
         precio: "$2.200",
-        contiene:`
+        contiene: `
         "Tableta de chocolate",
         "Leche caliente",
         "Taza grande",
         "Sabor intenso",
-        "Textura cremosa"`
+        "Textura cremosa"`,
       },
     ],
   },
   {
     categoria: "Dulces y postres",
-    clase: "bg-light",
+    clase: "",
     productos: [
       {
         nombre: "Medialuna",
@@ -400,7 +370,7 @@ const cartilla = [
         "Manteca",
         "Azúcar",
         "Levadura",
-        "Glaseado ligero"`
+        "Glaseado ligero"`,
       },
       {
         nombre: "Brownie",
@@ -412,7 +382,7 @@ const cartilla = [
         "Manteca",
         "Azúcar",
         "Huevos",
-        "Nueces picadas"`
+        "Nueces picadas"`,
       },
       {
         nombre: "Lemon Pie",
@@ -424,7 +394,7 @@ const cartilla = [
         "Crema de limón",
         "Azúcar",
         "Huevos",
-        "Merengue italiano"`
+        "Merengue italiano"`,
       },
       {
         nombre: "Cheesecake",
@@ -436,7 +406,7 @@ const cartilla = [
         "Base de galletas",
         "Azúcar",
         "Huevos",
-        "Salsa de frutos rojos"`
+        "Salsa de frutos rojos"`,
       },
       {
         nombre: "Alfajor de maicena",
@@ -448,52 +418,61 @@ const cartilla = [
         "Harina",
         "Manteca",
         "Dulce de leche",
-        "Coco rallado"`
+        "Coco rallado"`,
       },
     ],
   },
 ];
-
 const comandero = [];
-
 const contenedorCartilla = document.getElementById("contenedorCartilla");
-
 const renderizarCartilla = (cartilla) => {
   cartilla.forEach((categoria) => {
     const seccion = document.createElement("section");
     seccion.classList.add("py-5");
     if (categoria.clase) seccion.classList.add(categoria.clase);
-
+    if (categoria.categoria === "Bebidas frías") {
+      seccion.style.backgroundImage = "url('img/icedLatte.jpeg')";
+      seccion.style.backgroundSize = "cover";
+      seccion.style.backgroundPosition = "center";
+      seccion.style.backgroundAttachment = "fixed";
+    }
+    if (categoria.categoria === "Dulces y postres") {
+      seccion.style.backgroundImage = "url('img/Cheesecake.jpeg')";
+      seccion.style.backgroundSize = "cover";
+      seccion.style.backgroundPosition = "center";
+      seccion.style.backgroundAttachment = "fixed";
+    }
     const container = document.createElement("div");
     container.classList.add("container");
-
     const h2 = document.createElement("h2");
     h2.classList.add("text-center", "fw-bold", "mb-4");
     h2.textContent = categoria.categoria;
-
     const row = document.createElement("div");
     row.classList.add("row", "g-4");
-
     categoria.productos.forEach((producto) => {
       const col = document.createElement("div");
-      col.classList.add("col-4", "col-lg-3");
-
+      col.classList.add("col-6", "col-lg-3");
       const card = document.createElement("div");
-      card.classList.add("card", "h-100", "shadow-sm", "border-0");
-
+      card.classList.add(
+        "card",
+        "h-100",
+        "shadow-sm",
+        "border-0",
+        "overflow-hidden",
+      );
+      const ratio = document.createElement("div");
+      ratio.classList.add("ratio", "ratio-4x3");
       const img = document.createElement("img");
       img.src = producto.imagen;
-      img.classList.add("card-img-top");
+      img.classList.add("object-fit-cover");
       img.alt = producto.nombre;
       img.loading = "lazy";
-
+      ratio.appendChild(img);
       const cardBody = document.createElement("div");
       cardBody.classList.add("card-body", "d-flex", "flex-column", "p-3");
-
       const h5 = document.createElement("h5");
       h5.classList.add("card-title", "mb-1");
       h5.textContent = producto.nombre;
-
       const p = document.createElement("p");
       p.classList.add(
         "card-text",
@@ -503,7 +482,6 @@ const renderizarCartilla = (cartilla) => {
         "flex-grow-1",
       );
       p.textContent = producto.descripcion;
-
       const cardFooter = document.createElement("div");
       cardFooter.classList.add(
         "card-footer",
@@ -512,53 +490,43 @@ const renderizarCartilla = (cartilla) => {
         "pt-0",
         "pb-3",
       );
-
       const precio = document.createElement("span");
       precio.classList.add("fw-bold", "mb-2", "d-block");
       precio.textContent = producto.precio;
-
       const botonWrapper = document.createElement("div");
-      botonWrapper.classList.add( "d-flex", "justify-content-end", "mt-2");
-
+      botonWrapper.classList.add("d-flex", "justify-content-end", "mt-2");
       const Btnvermas = document.createElement("button");
       Btnvermas.classList.add("btn", "btn-sm", "btn-dark", "mt-2");
       Btnvermas.textContent = "Ver más";
-
-
       cardBody.appendChild(h5);
       cardBody.appendChild(p);
       cardFooter.appendChild(precio);
       cardFooter.appendChild(botonWrapper);
       botonWrapper.appendChild(Btnvermas);
-      card.appendChild(img);
+      card.appendChild(ratio);
       card.appendChild(cardBody);
       card.appendChild(cardFooter);
       col.appendChild(card);
       row.appendChild(col);
-
       Btnvermas.addEventListener("click", (e) => {
-      e.stopPropagation();
-      tituloModal.textContent = producto.nombre;
-      contenidoModal.innerHTML = `
-      <h6 class="mb-2">Este Producto contiene:</h6>
-      <p>${producto.contiene}</p>
-      <img src="${producto.imagen}" alt="${producto.nombre}" 
-         class="img-fluid rounded mt-3" style="max-height:200px;object-fit:cover;">`;
-      footerComandero.classList.add("d-none");
-      modal.show();
+        e.stopPropagation();
+        tituloModal.textContent = producto.nombre;
+        contenidoModal.innerHTML = `
+        <h6 class="mb-2">Este Producto contiene:</h6>
+        <p>${producto.contiene}</p>
+        <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded mt-3" style="max-height:200px;object-fit:cover;">`;
+        footerComandero.classList.add("d-none");
+        modal.show();
       });
-
       card.addEventListener("click", () => {
         comandero.push(producto);
         comanderoContador.textContent = comandero.length;
       });
     });
-
     container.appendChild(h2);
     container.appendChild(row);
     seccion.appendChild(container);
     contenedorCartilla.appendChild(seccion);
   });
 };
-
 renderizarCartilla(cartilla);

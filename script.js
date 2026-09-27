@@ -94,20 +94,21 @@ nosotrosBtn.addEventListener("click", (event) => {
 
 //nuestros cafes
 const renderizarCafes = (cafes) => {
-  const div = document.createElement("div");
-  div.classList.add("row", "g-3");
-
   cafes.forEach((cafe) => {
     const col = document.createElement("div");
-    col.classList.add("col-12", "col-sm-6", "col-md-4");
+    col.classList.add("col-6", "col-md-4");
 
     const card = document.createElement("div");
-    card.classList.add("card", "h-100", "shadow-sm");
+    card.classList.add("card", "h-100", "shadow-sm", "overflow-hidden");
+
+    const ratio = document.createElement("div");
+    ratio.classList.add("ratio", "ratio-4x3");
 
     const img = document.createElement("img");
     img.src = cafe.imagen;
-    img.classList.add("card-img-top", "img-fluid");
+    img.classList.add("object-fit-cover");
     img.alt = cafe.nombre;
+    ratio.appendChild(img);
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -122,13 +123,11 @@ const renderizarCafes = (cafes) => {
 
     cardBody.appendChild(h5);
     cardBody.appendChild(p);
-    card.appendChild(img);
+    card.appendChild(ratio);
     card.appendChild(cardBody);
     col.appendChild(card);
-    div.appendChild(col);
+    cardContenedor.appendChild(col);
   });
-
-  cardContenedor.appendChild(div);
 };
 
 renderizarCafes(cafes);
